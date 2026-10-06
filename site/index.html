@@ -3,46 +3,69 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Treasury Dashboard</title>
+<meta name="color-scheme" content="dark">
+<title>Treasury</title>
+<meta name="description" content="Public, read-only view of our onchain treasury on Ethereum, BNB Chain and Polygon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
 <main>
-  <header>
-    <h1 id="title">Treasury Dashboard</h1>
-    <p class="muted">Safe: <span id="safe" class="mono"></span> · Updated <span id="updated"></span></p>
+  <header class="hero">
+    <div class="pill"><span class="dot"></span> live onchain · <span id="updated">…</span></div>
+    <h1>treasury <span class="wiggle">🏦</span></h1>
+    <div class="total-label">total balance</div>
+    <div class="total" id="total">$0.00</div>
+    <p class="sub">public, read-only, no wallet needed. receipts or it didn't happen 🧾</p>
+    <button class="copy" id="safeBtn" type="button" title="Copy Safe address">
+      <span class="mono" id="safe"></span><span class="copy-ic">⧉ copy</span>
+    </button>
   </header>
 
-  <section class="cards" id="cards"></section>
-
-  <section>
-    <h2>Holdings</h2>
-    <div class="scroll"><table id="holdings"><thead><tr><th>Chain</th><th>Asset</th><th class="r">Amount</th><th class="r">Price</th><th class="r">Value (USD)</th></tr></thead><tbody></tbody></table></div>
+  <section aria-labelledby="h-mix">
+    <h2 id="h-mix">where the bag sits</h2>
+    <div class="mix" id="mix" role="img" aria-label="Allocation by asset"></div>
+    <ul class="legend" id="legend"></ul>
   </section>
 
-  <section>
-    <h2>Pending transactions</h2>
-    <div id="pending" class="muted"></div>
+  <section aria-labelledby="h-chains">
+    <h2 id="h-chains">by chain</h2>
+    <div class="chains" id="chains"></div>
   </section>
 
-  <section>
-    <div class="row"><h2>Transactions</h2>
-      <div class="filters">
-        <select id="fChain"><option value="">All chains</option></select>
-        <label class="muted"><input type="checkbox" id="fUnv"> Show unverified tokens</label>
-        <select id="fDir"><option value="">All</option><option value="in">Incoming</option><option value="out">Outgoing</option><option value="call">Contract calls</option></select>
+  <section aria-labelledby="h-pending" id="pendingSec" hidden>
+    <h2 id="h-pending">waiting for signatures ⏳</h2>
+    <div id="pending"></div>
+  </section>
+
+  <section aria-labelledby="h-feed">
+    <div class="row">
+      <h2 id="h-feed">the feed</h2>
+      <div class="filters" role="group" aria-label="Filter transactions">
+        <div class="pills" id="fChain"></div>
+        <div class="pills" id="fDir"></div>
       </div>
     </div>
-    <div class="scroll"><table id="txs"><thead><tr><th>Date (UTC)</th><th>Chain</th><th>Type</th><th>Counterparty</th><th class="r">Amount</th><th>Tx</th></tr></thead><tbody></tbody></table></div>
-    <button id="more" hidden>Show more</button>
+    <ul class="feed" id="feed"></ul>
+    <button class="more" id="more" type="button" hidden>load more</button>
   </section>
 
-  <section>
-    <h2>Signers</h2>
-    <div id="signers"></div>
+  <section aria-labelledby="h-sig">
+    <h2 id="h-sig">who holds the keys 🔑</h2>
+    <div id="signers" class="signers"></div>
   </section>
 
-  <footer class="muted">Read-only. Data from the Safe Transaction Service, prices from Binance (stablecoins assumed $1). Refreshed automatically; always verify on a block explorer.</footer>
+  <footer>
+    read-only · data from the Safe Transaction Service · prices from Binance (USDT assumed $1)<br>
+    only ETH, BNB, POL and USDT are shown — unknown tokens are hidden on purpose.<br>
+    always double-check on a block explorer. not financial advice ✌️
+  </footer>
 </main>
 <script src="app.js"></script>
 </body>
