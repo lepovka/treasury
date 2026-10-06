@@ -1,0 +1,204 @@
+{
+ "title": "Treasury Dashboard",
+ "safe": "0xF73735d83baA9e6E046C0932D427c2702869D196",
+ "updatedAt": "2026-10-06T22:29:53.185Z",
+ "labels": {},
+ "chains": [
+  {
+   "id": "eth",
+   "name": "Ethereum",
+   "explorer": "https://etherscan.io",
+   "owners": [
+    "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC"
+   ],
+   "threshold": 1,
+   "nonce": 0,
+   "holdings": [
+    {
+     "symbol": "ETH",
+     "name": "Ethereum native",
+     "token": null,
+     "amount": 0.0062,
+     "price": 2695.47,
+     "usd": 16.711913999999997
+    },
+    {
+     "symbol": "USDT",
+     "name": "Tether USD",
+     "token": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+     "amount": 18.709452,
+     "price": 1,
+     "usd": 18.709452
+    }
+   ],
+   "totalUsd": 35.42136599999999
+  },
+  {
+   "id": "bnb",
+   "name": "BNB Chain",
+   "explorer": "https://bscscan.com",
+   "owners": [
+    "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC"
+   ],
+   "threshold": 1,
+   "nonce": 0,
+   "holdings": [
+    {
+     "symbol": "BNB",
+     "name": "BNB Chain native",
+     "token": null,
+     "amount": 0.019,
+     "price": 780.1,
+     "usd": 14.8219
+    },
+    {
+     "symbol": "BSC-USD",
+     "name": "Binance Bridged USDT (BNB Smart Chain)",
+     "token": "0x55d398326f99059fF775485246999027B3197955",
+     "amount": 11.603830140769256,
+     "price": 1,
+     "usd": 11.603830140769256
+    }
+   ],
+   "totalUsd": 26.425730140769254
+  },
+  {
+   "id": "pol",
+   "name": "Polygon",
+   "explorer": "https://polygonscan.com",
+   "owners": [
+    "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC"
+   ],
+   "threshold": 1,
+   "nonce": 0,
+   "holdings": [
+    {
+     "symbol": "POL",
+     "name": "Polygon native",
+     "token": null,
+     "amount": 116.9,
+     "price": 0.10746,
+     "usd": 12.562074
+    },
+    {
+     "symbol": "USDT0",
+     "name": "USDT0",
+     "token": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+     "amount": 13.863111,
+     "price": 1,
+     "usd": 13.863111
+    }
+   ],
+   "totalUsd": 26.425185
+  }
+ ],
+ "transactions": [
+  {
+   "chain": "bnb",
+   "txHash": "0x6d796f7dd2c66529fe07c74ea6eed4f98993ec0636b492c42cabf5c845c1b99c",
+   "date": "2026-10-06T22:27:11Z",
+   "type": "ETHEREUM_TRANSACTION",
+   "failed": false,
+   "nonce": null,
+   "safeTxHash": null,
+   "direction": "in",
+   "counterparty": "0x1319cB478d4a5E8696ca40ec976EbaB0cD3038ac",
+   "symbol": "USD",
+   "amount": 11.603830140769256,
+   "token": "0x3Bf2789690D1cC30426e2eB74EB247Ec5484E5F8",
+   "unverified": true
+  },
+  {
+   "chain": "pol",
+   "txHash": "0x3f76bf8464423648ae381f05c61a48d451acaaf770568fdead198ebfac56f8fa",
+   "date": "2026-10-06T22:26:37Z",
+   "type": "ETHEREUM_TRANSACTION",
+   "failed": false,
+   "nonce": null,
+   "safeTxHash": null,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "POL",
+   "amount": 116.9,
+   "token": null,
+   "unverified": false
+  },
+  {
+   "chain": "pol",
+   "txHash": "0x4dbd90fc4ef256f2fb28ee740f9b9d275cdcb36141377a072973823d449903ee",
+   "date": "2026-10-06T22:25:33Z",
+   "type": "ETHEREUM_TRANSACTION",
+   "failed": false,
+   "nonce": null,
+   "safeTxHash": null,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "USDT0",
+   "amount": 13.863111,
+   "token": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+   "unverified": false
+  },
+  {
+   "chain": "bnb",
+   "txHash": "0xc2f1b20eab6cb6363774ee07b457671267368a2ffad1762804c383c09281e0ba",
+   "date": "2026-10-06T22:24:57Z",
+   "type": "ETHEREUM_TRANSACTION",
+   "failed": false,
+   "nonce": null,
+   "safeTxHash": null,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "BNB",
+   "amount": 0.019,
+   "token": null,
+   "unverified": false
+  },
+  {
+   "chain": "bnb",
+   "txHash": "0x15ae61012ce492a24770069eeb967fe97584fcc0421ba93d27a930e783df5142",
+   "date": "2026-10-06T22:24:12Z",
+   "type": "ETHEREUM_TRANSACTION",
+   "failed": false,
+   "nonce": null,
+   "safeTxHash": null,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "BSC-USD",
+   "amount": 11.603830140769256,
+   "token": "0x55d398326f99059fF775485246999027B3197955",
+   "unverified": false
+  },
+  {
+   "chain": "eth",
+   "txHash": "0x33a876fcb1b5239c694c8e715ab958120f6f66425685f83b7f75a74bd0041be7",
+   "date": "2026-10-06T22:22:23Z",
+   "type": "ETHEREUM_TRANSACTION",
+   "failed": false,
+   "nonce": null,
+   "safeTxHash": null,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "ETH",
+   "amount": 0.0062,
+   "token": null,
+   "unverified": false
+  },
+  {
+   "chain": "eth",
+   "txHash": "0xb7a25d83d1dc2d7e0c7c1a2622981933816c01023ca80e1d5197c7ff4293af70",
+   "date": "2026-10-06T22:21:11Z",
+   "type": "ETHEREUM_TRANSACTION",
+   "failed": false,
+   "nonce": null,
+   "safeTxHash": null,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "USDT",
+   "amount": 18.709452,
+   "token": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+   "unverified": false
+  }
+ ],
+ "pending": [],
+ "totalUsd": 88.27228114076925
+}

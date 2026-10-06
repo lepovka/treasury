@@ -1,0 +1,11 @@
+{
+  "title": "Treasury Dashboard",
+  "safe": "0xF73735d83baA9e6E046C0932D427c2702869D196",
+  "chains": [
+    { "id": "eth", "name": "Ethereum", "chainId": 1,   "native": "ETH", "coingeckoId": "ethereum",                 "platform": "ethereum",              "explorer": "https://etherscan.io" },
+    { "id": "bnb", "name": "BNB Chain", "chainId": 56,  "native": "BNB", "coingeckoId": "binancecoin",              "platform": "binance-smart-chain",   "explorer": "https://bscscan.com" },
+    { "id": "pol", "name": "Polygon",  "chainId": 137, "native": "POL", "coingeckoId": "polygon-ecosystem-token",  "platform": "polygon-pos",           "explorer": "https://polygonscan.com" }
+  ],
+  "maxTxPerChain": 200,
+  "labels": {}
+}

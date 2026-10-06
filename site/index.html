@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Treasury Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1 id="title">Treasury Dashboard</h1>
+    <p class="muted">Safe: <span id="safe" class="mono"></span> · Updated <span id="updated"></span></p>
+  </header>
+
+  <section class="cards" id="cards"></section>
+
+  <section>
+    <h2>Holdings</h2>
+    <div class="scroll"><table id="holdings"><thead><tr><th>Chain</th><th>Asset</th><th class="r">Amount</th><th class="r">Price</th><th class="r">Value (USD)</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Pending transactions</h2>
+    <div id="pending" class="muted"></div>
+  </section>
+
+  <section>
+    <div class="row"><h2>Transactions</h2>
+      <div class="filters">
+        <select id="fChain"><option value="">All chains</option></select>
+        <label class="muted"><input type="checkbox" id="fUnv"> Show unverified tokens</label>
+        <select id="fDir"><option value="">All</option><option value="in">Incoming</option><option value="out">Outgoing</option><option value="call">Contract calls</option></select>
+      </div>
+    </div>
+    <div class="scroll"><table id="txs"><thead><tr><th>Date (UTC)</th><th>Chain</th><th>Type</th><th>Counterparty</th><th class="r">Amount</th><th>Tx</th></tr></thead><tbody></tbody></table></div>
+    <button id="more" hidden>Show more</button>
+  </section>
+
+  <section>
+    <h2>Signers</h2>
+    <div id="signers"></div>
+  </section>
+
+  <footer class="muted">Read-only. Data from the Safe Transaction Service, prices from Binance (stablecoins assumed $1). Refreshed automatically; always verify on a block explorer.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
