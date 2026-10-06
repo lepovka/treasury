@@ -45,6 +45,22 @@ h1{font-size:clamp(40px,9vw,76px);line-height:1;letter-spacing:-.04em;margin:18p
 .copy .mono{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .copy-ic{font-size:12px;color:var(--lime);white-space:nowrap}
 
+/* donate */
+.cta{display:inline-block;margin:0 8px 8px 0;padding:11px 24px;border-radius:99px;background:var(--lime);color:#0a0a12;font-weight:700;transition:transform .15s}
+.cta:hover{transform:translateY(-2px) rotate(-1deg);text-decoration:none}
+.donate{margin-top:48px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:28px;border-radius:28px;background:linear-gradient(135deg,rgba(200,255,61,.14),rgba(255,78,205,.12));border:1px solid var(--line);backdrop-filter:blur(10px);scroll-margin-top:16px}
+.qr-wrap{background:#fff;padding:14px;border-radius:22px;box-shadow:0 12px 40px rgba(0,0,0,.4);transform:rotate(-2deg);transition:transform .2s}
+.qr-wrap:hover{transform:rotate(0) scale(1.02)}
+.qr svg{display:block;width:min(260px,70vw);height:auto}
+.donate h2{margin:0 0 6px}
+.lede{margin:0 0 14px;color:var(--mute)}.lede b{color:var(--ink)}
+.steps{margin:0 0 18px;padding-left:22px;display:grid;gap:4px}
+.steps li::marker{color:var(--lime);font-weight:700}
+.warn{margin-top:16px;padding:12px 14px;border-radius:14px;background:rgba(255,138,168,.12);border:1px solid rgba(255,138,168,.4);font-size:14px;line-height:1.5}
+.donate-info{min-width:0}
+.copy .mono{min-width:0}
+@media (max-width:700px){.donate{grid-template-columns:minmax(0,1fr);justify-items:center;padding:20px}.donate-info{width:100%}.qr-wrap{transform:none}.copy{display:flex;width:100%;justify-content:space-between}}
+
 /* allocation */
 .mix{display:flex;height:34px;border-radius:99px;overflow:hidden;gap:3px;background:var(--card)}
 .mix span{display:block;min-width:6px;height:100%;transition:flex-grow .8s cubic-bezier(.2,.9,.2,1)}
@@ -113,3 +129,4 @@ footer{margin-top:64px;color:var(--mute);font-size:13px;text-align:center;line-h
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+#qrAddr{white-space:normal;overflow-wrap:anywhere;text-align:left}

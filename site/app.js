@@ -37,6 +37,20 @@ function countUp(el, to) {
   requestAnimationFrame(step);
 }
 
+// QR of the bare address: works for every EVM network, the sender's wallet picks the chain.
+function drawQr(text) {
+  $("qrAddr").textContent = text;
+  $("qrCopy").onclick = async () => {
+    try { await navigator.clipboard.writeText(text); const i = $("qrCopyIc"); i.textContent = "✓ copied"; setTimeout(() => (i.textContent = "⧉ copy"), 1500); } catch {}
+  };
+  if (typeof qrcode !== "function") { $("qr").textContent = "QR unavailable — copy the address below."; return; }
+  const q = qrcode(0, "M"); q.addData(text); q.make();
+  const n = q.getModuleCount(), m = 1; // light border; the white tile around it supplies the quiet zone
+  let d = "";
+  for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (q.isDark(r, c)) d += `M${c + m} ${r + m}h1v1h-1z`;
+  $("qr").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${n + 2 * m} ${n + 2 * m}" shape-rendering="crispEdges"><rect width="100%" height="100%" fill="#fff"/><path d="${d}" fill="#000"/></svg>`;
+}
+
 function init() {
   document.title = D.title;
   $("updated").textContent = "updated " + ago(D.updatedAt);
@@ -46,6 +60,7 @@ function init() {
     try { await navigator.clipboard.writeText(D.safe); const i = document.querySelector(".copy-ic"); i.textContent = "✓ copied"; setTimeout(() => (i.textContent = "⧉ copy"), 1500); } catch {}
   };
   countUp($("total"), D.totalUsd);
+  drawQr(D.safe);
 
   // ticker: live prices from the data itself
   const px = new Map();

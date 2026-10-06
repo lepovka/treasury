@@ -23,10 +23,26 @@
     <div class="total-label">total balance</div>
     <div class="total" id="total">$0.00</div>
     <p class="sub">public, read-only, no wallet needed. receipts or it didn't happen 🧾</p>
+    <a class="cta" href="#donate">chip in ↓</a>
     <button class="copy" id="safeBtn" type="button" title="Copy Safe address">
       <span class="mono" id="safe"></span><span class="copy-ic">⧉ copy</span>
     </button>
   </header>
+
+  <section class="donate" id="donate" aria-labelledby="h-donate">
+    <div class="qr-wrap"><div class="qr" id="qr" role="img" aria-label="QR code of the treasury wallet address"></div></div>
+    <div class="donate-info">
+      <h2 id="h-donate">chip in 💸</h2>
+      <p class="lede">one QR, three networks. scan it with any wallet app, then <b>pick the network</b> before you send.</p>
+      <ol class="steps">
+        <li>scan the code (or copy the address)</li>
+        <li>choose <b>Ethereum</b>, <b>BNB Chain</b> or <b>Polygon</b> in your wallet</li>
+        <li>send <b>ETH</b> · <b>BNB</b> · <b>POL</b> · <b>USDT</b></li>
+      </ol>
+      <button class="copy" id="qrCopy" type="button" title="Copy address"><span class="mono" id="qrAddr"></span><span class="copy-ic" id="qrCopyIc">⧉ copy</span></button>
+      <div class="warn" role="note"><b>⚠️ only these 3 networks.</b> Don't send on Arbitrum, Base, Optimism, Avalanche, Tron, Solana or anything else — those funds can be lost for good. Sending a first small test is smart.</div>
+    </div>
+  </section>
 
   <section aria-labelledby="h-mix">
     <h2 id="h-mix">where the bag sits</h2>
@@ -67,6 +83,7 @@
     always double-check on a block explorer. not financial advice ✌️
   </footer>
 </main>
+<script src="vendor/qrcode.js?v=__BUILD__"></script>
 <script src="app.js?v=__BUILD__"></script>
 </body>
 </html>
