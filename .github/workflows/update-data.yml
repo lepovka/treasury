@@ -1,0 +1,39 @@
+name: Update data
+
+# Hourly: refresh balances/transactions and publish ONLY data.json to the `data` branch.
+# The live site reads it from there, so no new Pages deployment is needed.
+on:
+  schedule:
+    - cron: "7 * * * *"   # minute 7 avoids the busy top of the hour
+  workflow_dispatch:
+
+permissions:
+  contents: write         # needed to push the `data` branch; this workflow never touches main
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch on-chain data
+        run: node scripts/fetch-data.mjs   # exits non-zero (and publishes nothing) if the APIs fail
+        env:
+          SAFE_API_KEY: ${{ secrets.SAFE_API_KEY }} # optional
+      - name: Publish data.json to the data branch (one commit, no history)
+        run: |
+          set -euo pipefail
+          mkdir /tmp/pub && cp site/data.json /tmp/pub/data.json
+          cd /tmp/pub
+          git init -q -b data
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -q -m "data $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" HEAD:data

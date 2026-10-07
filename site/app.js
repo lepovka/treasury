@@ -9,8 +9,20 @@ const PAGE = 20;
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 let D, shown = PAGE, fChain = "", fDir = "";
 
-fetch("data.json?_=" + Date.now()).then((r) => r.json()).then((d) => { D = d; init(); })
-  .catch(() => { document.querySelector("main").innerHTML = '<p class="err">couldn\'t load the data 😵 — try refreshing</p>'; });
+// The address (and so the QR code) is baked into the deployed page, never read from the data feed.
+const SAFE = document.body.dataset.safe;
+const FEED = document.body.dataset.feed;
+const fail = (msg) => { document.querySelector("main").innerHTML = `<p class="err">${msg}</p>`; };
+const getJson = async (u) => { const r = await fetch(u); if (!r.ok) throw new Error(r.status); return r.json(); };
+
+(async () => {
+  let d;
+  try { d = await getJson(FEED + "?t=" + Math.floor(Date.now() / 300000)); }          // live feed, 5-min cache bucket
+  catch { try { d = await getJson("data.json?t=" + Math.floor(Date.now() / 300000)); } // fallback: copy shipped with the site
+          catch { return fail("couldn't load the data 😵 — try refreshing"); } }
+  if (String(d.safe).toLowerCase() !== SAFE.toLowerCase()) return fail("data doesn't match this wallet 🚫 — don't send funds until this is fixed");
+  D = d; init();
+})();
 
 const chainOf = (id) => D.chains.find((c) => c.id === id);
 const label = (a) => D.labels?.[a?.toLowerCase()] ?? D.labels?.[a] ?? short(a);
@@ -55,12 +67,13 @@ function init() {
   document.title = D.title;
   $("updated").textContent = "updated " + ago(D.updatedAt);
   $("updated").title = new Date(D.updatedAt).toUTCString();
-  $("safe").textContent = D.safe;
+  if (Date.now() - new Date(D.updatedAt) > 3 * 3600e3) { $("updated").textContent += " ⚠️ may be outdated"; $("updated").style.color = "var(--out)"; }
+  $("safe").textContent = SAFE;
   $("safeBtn").onclick = async () => {
-    try { await navigator.clipboard.writeText(D.safe); const i = document.querySelector(".copy-ic"); i.textContent = "✓ copied"; setTimeout(() => (i.textContent = "⧉ copy"), 1500); } catch {}
+    try { await navigator.clipboard.writeText(SAFE); const i = document.querySelector(".copy-ic"); i.textContent = "✓ copied"; setTimeout(() => (i.textContent = "⧉ copy"), 1500); } catch {}
   };
   countUp($("total"), D.totalUsd);
-  drawQr(D.safe);
+  drawQr(SAFE);
 
   // ticker: live prices from the data itself
   const px = new Map();

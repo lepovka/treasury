@@ -127,6 +127,7 @@ for (const c of cfg.chains) {
   await sleep(500);
 }
 
+if (!out.chains.length) throw new Error("No chain returned data; refusing to overwrite the published data");
 out.transactions.sort((a, b) => new Date(b.date) - new Date(a.date));
 out.totalUsd = out.chains.reduce((s, c) => s + c.totalUsd, 0);
 await writeFile(new URL("../site/data.json", import.meta.url), JSON.stringify(out, null, 1));

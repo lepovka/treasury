@@ -1,7 +1,7 @@
 {
  "title": "Treasury",
  "safe": "0xF73735d83baA9e6E046C0932D427c2702869D196",
- "updatedAt": "2026-10-06T22:47:01.518Z",
+ "updatedAt": "2026-10-07T12:17:11.102Z",
  "labels": {},
  "chains": [
   {
@@ -15,21 +15,21 @@
    "threshold": 1,
    "holdings": [
     {
+     "symbol": "ETH",
+     "native": true,
+     "amount": 0.01156355807979847,
+     "price": 2580,
+     "usd": 29.83397984588005
+    },
+    {
      "symbol": "USDT",
      "native": false,
      "amount": 18.709452,
      "price": 1,
      "usd": 18.709452
-    },
-    {
-     "symbol": "ETH",
-     "native": true,
-     "amount": 0.0062,
-     "price": 2696.49,
-     "usd": 16.718238
     }
    ],
-   "totalUsd": 35.42769
+   "totalUsd": 48.54343184588005
   },
   {
    "id": "bnb",
@@ -45,8 +45,8 @@
      "symbol": "BNB",
      "native": true,
      "amount": 0.019,
-     "price": 779.73,
-     "usd": 14.814869999999999
+     "price": 767.68,
+     "usd": 14.585919999999998
     },
     {
      "symbol": "USDT",
@@ -56,7 +56,7 @@
      "usd": 11.603830140769256
     }
    ],
-   "totalUsd": 26.418700140769253
+   "totalUsd": 26.189750140769256
   },
   {
    "id": "pol",
@@ -79,14 +79,24 @@
      "symbol": "POL",
      "native": true,
      "amount": 116.9,
-     "price": 0.10753,
-     "usd": 12.570257
+     "price": 0.10232,
+     "usd": 11.961208
     }
    ],
-   "totalUsd": 26.433368
+   "totalUsd": 25.824319
   }
  ],
  "transactions": [
+  {
+   "chain": "eth",
+   "txHash": "0x325febe6e9b7d4d043b44b0675fc9430f88fdd5570bdadef2033ccaec5ff524c",
+   "date": "2026-10-06T23:12:11Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x41a4d0adDEF69509fB5EDF449bBDB30bbAeE3713",
+   "symbol": "ETH",
+   "amount": 0.00536355807979847
+  },
   {
    "chain": "pol",
    "txHash": "0x3f76bf8464423648ae381f05c61a48d451acaaf770568fdead198ebfac56f8fa",
@@ -149,5 +159,5 @@
   }
  ],
  "pending": [],
- "totalUsd": 88.27975814076925
+ "totalUsd": 100.5575009866493
 }

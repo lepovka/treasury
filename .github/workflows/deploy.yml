@@ -1,11 +1,11 @@
-name: Update dashboard
+name: Deploy site
 
+# Deploys only when the code changes (push to main) or when started by hand.
+# Data refreshes do NOT redeploy: they go through update-data.yml.
 on:
-  schedule:
-    - cron: "*/15 * * * *"
-  workflow_dispatch:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -27,7 +27,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Fetch on-chain data
+      - name: Check the wallet address is identical in config.json and index.html
+        run: |
+          node -e '
+            const c = require("./config.json").safe.toLowerCase();
+            const h = (require("fs").readFileSync("site/index.html","utf8").match(/data-safe="([^"]+)"/)||[])[1]?.toLowerCase();
+            if (c !== h) { console.error("MISMATCH config.json=" + c + " index.html=" + h); process.exit(1); }
+            console.log("address OK", c);'
+      - name: Ship a fresh fallback copy of the data
         run: node scripts/fetch-data.mjs
         env:
           SAFE_API_KEY: ${{ secrets.SAFE_API_KEY }} # optional
