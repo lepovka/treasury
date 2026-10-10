@@ -1,0 +1,163 @@
+{
+ "title": "Treasury",
+ "safe": "0xF73735d83baA9e6E046C0932D427c2702869D196",
+ "updatedAt": "2026-10-10T17:16:53.663Z",
+ "labels": {},
+ "chains": [
+  {
+   "id": "eth",
+   "name": "Ethereum",
+   "native": "ETH",
+   "explorer": "https://etherscan.io",
+   "owners": [
+    "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC"
+   ],
+   "threshold": 1,
+   "holdings": [
+    {
+     "symbol": "ETH",
+     "native": true,
+     "amount": 0.01156355807979847,
+     "price": 2507.43,
+     "usd": 28.994812436029076
+    },
+    {
+     "symbol": "USDT",
+     "native": false,
+     "amount": 18.709452,
+     "price": 1,
+     "usd": 18.709452
+    }
+   ],
+   "totalUsd": 47.70426443602908
+  },
+  {
+   "id": "bnb",
+   "name": "BNB Chain",
+   "native": "BNB",
+   "explorer": "https://bscscan.com",
+   "owners": [
+    "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC"
+   ],
+   "threshold": 1,
+   "holdings": [
+    {
+     "symbol": "BNB",
+     "native": true,
+     "amount": 0.019,
+     "price": 750.02,
+     "usd": 14.25038
+    },
+    {
+     "symbol": "USDT",
+     "native": false,
+     "amount": 11.603830140769256,
+     "price": 1,
+     "usd": 11.603830140769256
+    }
+   ],
+   "totalUsd": 25.854210140769254
+  },
+  {
+   "id": "pol",
+   "name": "Polygon",
+   "native": "POL",
+   "explorer": "https://polygonscan.com",
+   "owners": [
+    "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC"
+   ],
+   "threshold": 1,
+   "holdings": [
+    {
+     "symbol": "USDT0",
+     "native": false,
+     "amount": 13.863111,
+     "price": 1,
+     "usd": 13.863111
+    },
+    {
+     "symbol": "POL",
+     "native": true,
+     "amount": 116.9,
+     "price": 0.10153,
+     "usd": 11.868857
+    }
+   ],
+   "totalUsd": 25.731968000000002
+  }
+ ],
+ "transactions": [
+  {
+   "chain": "eth",
+   "txHash": "0x325febe6e9b7d4d043b44b0675fc9430f88fdd5570bdadef2033ccaec5ff524c",
+   "date": "2026-10-06T23:12:11Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x41a4d0adDEF69509fB5EDF449bBDB30bbAeE3713",
+   "symbol": "ETH",
+   "amount": 0.00536355807979847
+  },
+  {
+   "chain": "pol",
+   "txHash": "0x3f76bf8464423648ae381f05c61a48d451acaaf770568fdead198ebfac56f8fa",
+   "date": "2026-10-06T22:26:37Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "POL",
+   "amount": 116.9
+  },
+  {
+   "chain": "pol",
+   "txHash": "0x4dbd90fc4ef256f2fb28ee740f9b9d275cdcb36141377a072973823d449903ee",
+   "date": "2026-10-06T22:25:33Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "USDT0",
+   "amount": 13.863111
+  },
+  {
+   "chain": "bnb",
+   "txHash": "0xc2f1b20eab6cb6363774ee07b457671267368a2ffad1762804c383c09281e0ba",
+   "date": "2026-10-06T22:24:57Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "BNB",
+   "amount": 0.019
+  },
+  {
+   "chain": "bnb",
+   "txHash": "0x15ae61012ce492a24770069eeb967fe97584fcc0421ba93d27a930e783df5142",
+   "date": "2026-10-06T22:24:12Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "USDT",
+   "amount": 11.603830140769256
+  },
+  {
+   "chain": "eth",
+   "txHash": "0x33a876fcb1b5239c694c8e715ab958120f6f66425685f83b7f75a74bd0041be7",
+   "date": "2026-10-06T22:22:23Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "ETH",
+   "amount": 0.0062
+  },
+  {
+   "chain": "eth",
+   "txHash": "0xb7a25d83d1dc2d7e0c7c1a2622981933816c01023ca80e1d5197c7ff4293af70",
+   "date": "2026-10-06T22:21:11Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "USDT",
+   "amount": 18.709452
+  }
+ ],
+ "pending": [],
+ "totalUsd": 99.29044257679834
+}
