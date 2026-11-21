@@ -1,0 +1,218 @@
+{
+ "title": "Treasury",
+ "safe": "0xF73735d83baA9e6E046C0932D427c2702869D196",
+ "updatedAt": "2026-11-21T17:19:59.015Z",
+ "labels": {},
+ "chains": [
+  {
+   "id": "eth",
+   "name": "Ethereum",
+   "native": "ETH",
+   "explorer": "https://etherscan.io",
+   "owners": [
+    "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC"
+   ],
+   "threshold": 1,
+   "holdings": [],
+   "totalUsd": 0
+  },
+  {
+   "id": "bnb",
+   "name": "BNB Chain",
+   "native": "BNB",
+   "explorer": "https://bscscan.com",
+   "owners": [
+    "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC"
+   ],
+   "threshold": 1,
+   "holdings": [],
+   "totalUsd": 0
+  },
+  {
+   "id": "pol",
+   "name": "Polygon",
+   "native": "POL",
+   "explorer": "https://polygonscan.com",
+   "owners": [
+    "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC"
+   ],
+   "threshold": 1,
+   "holdings": [],
+   "totalUsd": 0
+  }
+ ],
+ "transactions": [
+  {
+   "chain": "eth",
+   "txHash": "0xc563641f2a812f40da8bc2ef3b116c93e57b1711c568d8cb09e025cf3ec2df14",
+   "date": "2026-11-21T10:52:59Z",
+   "failed": false,
+   "direction": "out",
+   "counterparty": "0xa7323486B4a3325254766F6eBEffaAb39DA1a465",
+   "symbol": "USDT",
+   "amount": 8.960703
+  },
+  {
+   "chain": "pol",
+   "txHash": "0x7a6b330cceec00f5b8795cef0236ee2017bd2f9844dc322d4eaa7205c18d3109",
+   "date": "2026-11-21T10:50:43Z",
+   "failed": false,
+   "direction": "out",
+   "counterparty": "0xa7323486B4a3325254766F6eBEffaAb39DA1a465",
+   "symbol": "USDT0",
+   "amount": 23.201993
+  },
+  {
+   "chain": "bnb",
+   "txHash": "0xc58b85baa4b70ec6f3a3cd2471403c3c953c56497cc23c399ae56e950b24c4da",
+   "date": "2026-11-21T10:45:38Z",
+   "failed": false,
+   "direction": "out",
+   "counterparty": "0xa7323486B4a3325254766F6eBEffaAb39DA1a465",
+   "symbol": "USDT",
+   "amount": 22.509781870235997
+  },
+  {
+   "chain": "eth",
+   "txHash": "0xaa099e0016d157cab4e25407fb5f3f912ea605ae22af79df9976e3e211869db4",
+   "date": "2026-11-18T22:22:23Z",
+   "failed": false,
+   "direction": "out",
+   "counterparty": "0x977F6A2C952fC7fEbc5D62A7d8d94a9F2BaD2465",
+   "symbol": "USDT",
+   "amount": 30
+  },
+  {
+   "chain": "pol",
+   "txHash": "0x4d0989c515a5e26256f5c126cd2db0da5a33379ea7cecfe1aa1121b0262cae65",
+   "date": "2026-11-18T22:19:37Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x9008D19f58AAbD9eD0D60971565AA8510560ab41",
+   "symbol": "USDT0",
+   "amount": 9.338882
+  },
+  {
+   "chain": "pol",
+   "txHash": "0x66331c79c94eedab15f71ba9159321441e02976134f19d37636799743d52ffbf",
+   "date": "2026-11-18T22:19:28Z",
+   "failed": false,
+   "direction": "call",
+   "counterparty": "0xA83c336B20401Af773B6219BA5027174338D1836",
+   "symbol": "",
+   "amount": 0
+  },
+  {
+   "chain": "bnb",
+   "txHash": "0x361390d8bf6301045e3e51567c05adbd8045ad9faa43b9d5308473d11f849bb8",
+   "date": "2026-11-18T22:18:01Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x9008D19f58AAbD9eD0D60971565AA8510560ab41",
+   "symbol": "USDT",
+   "amount": 10.905951729466741
+  },
+  {
+   "chain": "bnb",
+   "txHash": "0x391e3b8cec15850eafaa1cf3685e5c8e302278eae99e591d84b525a18737eb0a",
+   "date": "2026-11-18T22:17:54Z",
+   "failed": false,
+   "direction": "call",
+   "counterparty": "0xA83c336B20401Af773B6219BA5027174338D1836",
+   "symbol": "",
+   "amount": 0
+  },
+  {
+   "chain": "eth",
+   "txHash": "0xb2e18df0cbc9f8ac59178a069ded972051c340b3a18c837b420b593488cd5146",
+   "date": "2026-11-18T22:16:35Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x9008D19f58AAbD9eD0D60971565AA8510560ab41",
+   "symbol": "USDT",
+   "amount": 20.251251
+  },
+  {
+   "chain": "eth",
+   "txHash": "0x644c4ba3f26131be11408cfa6e2162c2be51d568ae6572d877399d67985abb76",
+   "date": "2026-11-18T22:16:23Z",
+   "failed": false,
+   "direction": "out",
+   "counterparty": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+   "symbol": "ETH",
+   "amount": 0.01156355807979847
+  },
+  {
+   "chain": "eth",
+   "txHash": "0x325febe6e9b7d4d043b44b0675fc9430f88fdd5570bdadef2033ccaec5ff524c",
+   "date": "2026-10-06T23:12:11Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x41a4d0adDEF69509fB5EDF449bBDB30bbAeE3713",
+   "symbol": "ETH",
+   "amount": 0.00536355807979847
+  },
+  {
+   "chain": "pol",
+   "txHash": "0x3f76bf8464423648ae381f05c61a48d451acaaf770568fdead198ebfac56f8fa",
+   "date": "2026-10-06T22:26:37Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "POL",
+   "amount": 116.9
+  },
+  {
+   "chain": "pol",
+   "txHash": "0x4dbd90fc4ef256f2fb28ee740f9b9d275cdcb36141377a072973823d449903ee",
+   "date": "2026-10-06T22:25:33Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "USDT0",
+   "amount": 13.863111
+  },
+  {
+   "chain": "bnb",
+   "txHash": "0xc2f1b20eab6cb6363774ee07b457671267368a2ffad1762804c383c09281e0ba",
+   "date": "2026-10-06T22:24:57Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "BNB",
+   "amount": 0.019
+  },
+  {
+   "chain": "bnb",
+   "txHash": "0x15ae61012ce492a24770069eeb967fe97584fcc0421ba93d27a930e783df5142",
+   "date": "2026-10-06T22:24:12Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "USDT",
+   "amount": 11.603830140769256
+  },
+  {
+   "chain": "eth",
+   "txHash": "0x33a876fcb1b5239c694c8e715ab958120f6f66425685f83b7f75a74bd0041be7",
+   "date": "2026-10-06T22:22:23Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "ETH",
+   "amount": 0.0062
+  },
+  {
+   "chain": "eth",
+   "txHash": "0xb7a25d83d1dc2d7e0c7c1a2622981933816c01023ca80e1d5197c7ff4293af70",
+   "date": "2026-10-06T22:21:11Z",
+   "failed": false,
+   "direction": "in",
+   "counterparty": "0x56E2e79F9d7ceEf86C5ba6CfCF27f7b45f3038aC",
+   "symbol": "USDT",
+   "amount": 18.709452
+  }
+ ],
+ "pending": [],
+ "totalUsd": 0
+}
